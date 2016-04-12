@@ -3,6 +3,5 @@
 /.cache
 /.sass-cache
 /build
-Gemfile.lock
 .ruby-gemset
 .ruby-version
