@@ -1,0 +1,36 @@
+---
+title: contact
+---
+
+%section.main-headline.white-bg
+  .container-fluid
+    .row
+      .col-md-7.no-pad.text-left.header-caps
+        %h2.black.font2bold
+          Get in Touch
+        %h3.grey.font3
+          Have an idea you want realized? Looking to improve the way you do business on the web?
+          %span.highlight= link_to 'Email us.', '#contact'
+
+%section.common-content.white-bg.pad-top-half.pad-bottom
+  .container
+    .row
+      .map
+        %iframe{ width: '100%', height: '300px', frameBorder: '0', src: 'https://a.tiles.mapbox.com/v4/propulsion.7c4a5a6f/attribution,zoomwheel.html?access_token=pk.eyJ1IjoicHJvcHVsc2lvbiIsImEiOiJuYmZ1eGtnIn0.C2mc5AGbQWh0f3U2jP2z8g' }
+
+    #contact.row
+      .col-md-4.no-pad.text-left
+        = image_tag 'lake-tahoe.png', style: 'height:150px;float:left;'
+      .col-md-8
+        = form_tag 'https://formkeep.com/f/40f8d2f44e9c', id: 'contact_form' do
+          %input{ type: 'hidden', name: 'utf8', value: '✓' }
+          %input{ type: 'hidden', name: 'subject', value: 'Contact Form' }
+          .row
+            %p.msg{ style: 'display:none;' } Please complete the form accordingly.
+          .row
+            %input.form-control#name{ name: 'name', placeholder: 'Name', type: 'text' }
+            %input.form-control#email{ name: 'email', placeholder: 'E-mail', type: 'text' }
+            %input.form-control#phone{ name: 'phone', placeholder: 'Phone', type: 'text' }
+            %textarea.form-control#message{ name: 'message', placeholder: 'Message', type: 'text' }
+          .row
+            %button.btn.btn-nord.btn-nord-dark#send{ type: 'submit' } Send

@@ -4,10 +4,38 @@
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %title= current_page.data.title || "The Middleman"
-    = stylesheet_link_tag "application"
+    %title= page_title(current_page.data.title)
+
+    <!-- Fonts -->
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans:400,300,700,800'
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic'
+
+    <!-- Styles -->
+    = stylesheet_link_tag 'application'
+
+    <!-- Other -->
+    = partial 'partials/analytics' unless current_page.data.hide_analytics
+
+  - splash = ( yield_content :splash )
 
   %body{class: page_classes}
-    = yield
-    = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js"
-    = javascript_include_tag "application"
+    #preloader.preloader
+      #status
+
+    %section.mastwrap
+      = partial 'partials/header'
+      - if splash.present?
+        = splash
+
+      = yield
+
+      = partial 'partials/footer'
+
+    .sticky-footer
+
+    = javascript_include_tag '//code.jquery.com/jquery-2.1.1.min.js'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js'
+    = javascript_include_tag 'application'
+
+    %script
+      $('.case-study-item-01').backstretch([ '/assets/images/case/01/01.jpg' ]);

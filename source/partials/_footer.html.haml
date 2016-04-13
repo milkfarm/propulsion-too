@@ -1,0 +1,16 @@
+%footer.mastfoot.white-bg
+  .container-fluid
+    .row
+      %article.credits.col-md-4.no-pad.text-left
+        %ul.foot-social
+          %li= link_to image_tag('social/behance.svg'), 'https://behance.com', title: 'behance'
+          %li= link_to image_tag('social/dribbble.svg'), 'https://dribbble.com', title: 'dribbble'
+          %li= link_to image_tag('social/facebook.svg'), 'https://facebook.com', title: 'facebook'
+          %li= link_to image_tag('social/twitter.svg'), 'https://twitter.com.com/milkfarm', title: 'twitter'
+        %p.font1.dark
+          &copy; #{Time.now.year} a #{link_to 'milkfarm', 'http://milkfarmproductions.com'} production. all rights reserved.
+          %br
+          image credits: #{link_to 'chen xing', 'https://www.behance.net/xingchen'}
+      %article.col-md-8.no-pad.text-left
+        %h5.font1.black
+          We strive to create refreshing solutions, no matter how small the project. #{link_to 'Get in touch', '/contact.html', class: 'get-in-touch'} to start the brainstorming. There's no commitment.

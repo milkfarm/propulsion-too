@@ -1,0 +1,306 @@
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries 
+near the relevant codeFor example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it 
+there
+*/
+
+
+/* Larger than Desktop HD */
+@media (max-width: 1200px) {
+}
+
+/* Larger than desktop */
+@media (max-width: 992px) {
+    .container, .container-fluid {
+        max-width: 792px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section.mastwrap{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    header.masthead, section.mastwrap {
+        border-left: none;
+        border-right: none;
+    }
+    header.masthead{
+        position: relative;
+    }
+    .main-headline{
+        margin-top: 0;
+    }
+    .img-responsive {
+        display: inline-block;
+    }
+    .header-caps h1{
+        font-size: 64px;
+        line-height: 72px;
+    }
+    .header-caps h2{
+        font-size: 48px;
+        line-height: 55px;
+    }
+    .featured-title-caption span{
+        font-size: 32px;
+        line-height: 48px;
+    }
+    .common-content h3 span{
+        font-size: 32px;
+        line-height: 39px;
+    }
+    footer.mastfoot h5{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .intro-fashion h5 > span{
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 2px;
+    }
+    .works-item-inner h3 > span::after{
+        width: 30px;
+        height: 30px;
+    }
+    .works-masonry-container .works-item-one-fourth, 
+    .works-masonry-container .works-item-one-third{
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 50% !important;
+    } 
+    .news-masonry-container .news-item-one-fourth-spaced,
+    .news-masonry-container .news-item-one-third-spaced{
+        margin: 1% !important;
+        padding: 0 !important;
+        width: 48% !important;
+    }
+}
+
+/* Larger than tablet */
+@media (max-width: 800px) {
+    .container, .container-fluid {
+        max-width: 600px;
+    }
+    section.mastwrap{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    header.masthead, section.mastwrap {
+        border-left: none;
+        border-right: none;
+    }
+    .text-left, .text-right, .mastfoot, .credits, .services-item {
+        text-align: center;
+    }
+    .img-responsive {
+        display: inline-block;
+    }
+    .works-masonry-container .works-item{
+        width: 100% !important;
+    }
+    .page-section{
+        padding: 100px 0;
+    }
+    .add-top {
+        margin-top: 100px;
+    }
+    .add-top-half {
+        margin-top: 50px;
+    }
+    .add-bottom {
+        margin-bottom: 100px;
+    }
+    .add-bottom-half {
+        margin-bottom: 50px;
+    }
+    .pad-top {
+        padding-top: 100px;
+    }
+    .pad-top-half {
+        padding-top: 50px;
+    }
+    .pad-bottom {
+        padding-bottom: 100px;
+    }
+    .pad-bottom-half {
+        padding-bottom: 50px;
+    }
+    .works-filter-wrap{
+        margin-top: 10px;
+    }
+    .experience-item h5{
+        border: none;
+    }
+    nav.mastnav{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+}
+
+/*iPhone 6Plus Landscape Mode*/
+@media screen and (max-width: 736px) {
+    .container, .container-fluid {
+        max-width: 576px;
+    }
+    section.mastwrap{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .news-masonry-container .news-item-one-fourth-spaced,
+    .news-masonry-container .news-item-one-third-spaced{
+        margin: 1% !important;
+        padding: 0 !important;
+        width: 98% !important;
+    }
+    .main-link, .sub-menu a{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+
+/*iPhone 6 Landscape Mode*/
+@media screen and (max-width: 667px) {
+    .container, .container-fluid {
+        max-width: 507px;
+    }
+    section.mastwrap{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .header-caps h1{
+        font-size: 56px;
+        line-height: 65px;
+    }
+    .header-caps h2{
+        font-size: 40px;
+        line-height: 47px;
+    }
+    .featured-title-caption span{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .common-content h3 span{
+        font-size: 24px;
+        line-height: 31px;
+    }
+    nav.mastnav{
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+
+
+/*Google Nexus and Other Large Smart Phones v1*/
+@media screen and (max-width: 600px) {
+    .container, .container-fluid {
+        max-width: 480px;
+    }
+    section.mastwrap{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+/*iPhone Landscape Mode and Mediium Smart Phones*/
+@media screen and (max-width: 480px) {
+    .container, .container-fluid {
+        max-width: 360px;
+    }
+    section.mastwrap{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .page-section{
+        padding: 100px 0;
+    }
+    .add-top {
+        margin-top: 100px;
+    }
+    .add-top-half {
+        margin-top: 50px;
+    }
+    .add-bottom {
+        margin-bottom: 100px;
+    }
+    .add-bottom-half {
+        margin-bottom: 50px;
+    }
+    .pad-top {
+        padding-top: 100px;
+    }
+    .pad-top-half {
+        padding-top: 50px;
+    }
+    .pad-bottom {
+        padding-bottom: 100px;
+    }
+    .pad-bottom-half {
+        padding-bottom: 50px;
+    }
+    .header-caps h1{
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .header-caps h2{
+        font-size: 32px;
+        line-height: 39px;
+    }
+    .header-caps h3{
+        font-size: 24px;
+        line-height: 31px;
+    }
+    .featured-title-caption span{
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .common-content h3 span, .featured-title-subtext, footer.mastfoot h5{
+        font-size: 16px;
+        line-height: 23px;
+    }
+    nav.mastnav{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+/*iPhone 6Plus Portrait Mode*/
+@media screen and (max-width: 414px) {
+    .container, .container-fluid {
+        max-width: 334px;
+    }
+    section.mastwrap{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .featured-title-caption span, .featured-title-subtext{
+        letter-spacing: 2px;
+    }
+}
+
+/*iPhone 6 Portrait Mode*/
+@media screen and (max-width: 375px) {
+    .container, .container-fluid {
+        max-width: 295px;
+    }
+    section.mastwrap{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/*iPhone 5S, 5, 4S & 4 Portrait Mode and Very Small Mobile Phones*/
+@media screen and (max-width: 320px) {
+    .container, .container-fluid {
+        max-width: 260px;
+    }
+    section.mastwrap{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+

@@ -1,11 +1,27 @@
 ---
-title: Page Title
+title: home
 ---
 
-.delete-me
-  .container
-    %h1 thoughtbot Middleman Starter
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+%section.main-headline.white-bg
+  .container-fluid
+    .row
+      .col-md-7.no-pad.text-left.header-caps
+        %h2.black.font2bold
+          Hello
+        %h3.grey.font3
+          Propulsion is a
+          %span.color
+            web development team
+          based in Lake Tahoe, California. We specialize in the creation of
+          %span.color
+            custom applications
+          for the
+          %span.color
+            book publishing industry.
+
+%section.case-study-item.case-study-item-01.fullheight.add-top-half
+  .valign
+    .container-fluid
+      .row
+        .col-md-6.col-md-offset-3.text-center.header-caps
+          = link_to 'View Portfolio', '/portfolio.html', class: 'btn btn-nord btn-nord-dark'
