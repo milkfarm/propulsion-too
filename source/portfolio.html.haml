@@ -1,91 +1,122 @@
 ---
-title: clients
+title: portfolio
 ---
 
-%h2 Clients
-%p Propulsion has developed and refined solutions for publishers since 2001. When presented with interesting opportunities, we also intermittently work with creative agencies, artists and entrepeneurs.
+%section.main-headline.white-bg
+  .container-fluid
+    .row
+      .col-md-7.no-pad.text-left.header-caps
+        %h2.black.font2bold
+          Our work
+        %h3.grey.font3
+          Propulsion has developed solutions for publishers, creative agencies, artists and entrepeneurs
+          %span.color for over a decade.
+          Take a peek at our most recent projects.
 
-%section.top-line
-  .row
-    .col-md-12
-      .filter-container.stick{'data-spy' => 'affix'}
-        .filter-trigger Filters
-        %ul.filters
-          %li
-            %button{'data-filter' => '*'} All
-          %li
-            %button{'data-filter' => '.publisher'} Publishers
-          %li
-            %button{'data-filter' => '.other'} Other
-  #grid
-    = link_to 'http://jappleseedmedia.com', class: 'item transition publisher visible jappleseed' do
-      .caption
-        %h5.extra September 2015
-        .titles
-          %h3.title J. Appleseed
-          %h4.subtitle J. Appleseed is using TitleLeaf to streamline interaction between sales representatives and their school/library customers.
-    = link_to 'http://bearportpublishing.com', class: 'item transition publisher visible bearport' do
-      .caption
-        %h5.extra August 2015
-        .titles
-          %h3.title Bearport Publishing
-          %h4.subtitle Bearport Publishing wanted to avoid the big upgrade expense associated with CyberWolf's PowerWeb solution. TitleLeaf fit the bill.
-    = link_to 'http://epicpress.com', class: 'item transition publisher visible epicpress' do
-      .caption
-        %h5.extra May 2015
-        .titles
-          %h3.title EPIC Press
-          %h4.subtitle EPIC Press is a sister company to ABDO Publishing. Based on ABDO's positive experience with TitleLeaf, EPIC Press came directly to us for an ecommerce website.
-    = link_to 'http://midamericabooks.com', class: 'item transition publisher visible midamerica' do
-      .caption
-        %h5.extra October 2014
-        .titles
-          %h3.title MidAmerica Books
-          %h4.subtitle MidAmerica Books chose TitleLeaf considering it’s long-standing history and custom features that address their book preview business model.
-    = link_to 'http://abdopublishing.com', class: 'item transition publisher visible abdopub' do
-      .caption
-        %h5.extra July 2014
-        .titles
-          %h3.title ABDO Publishing
-          %h4.subtitle After testing a WordPress ecommerce solution, Abdo Publishing decided an application built for the unique needs of publishers was more appropriate.
-    = link_to 'http://sleepingbearpress.com', class: 'item transition publisher visible sleepingbear' do
-      .caption
-        %h5.extra December 2012
-        .titles
-          %h3.title Sleeping Bear Press
-          %h4.subtitle Showcasing the flexibility of titleleaf, we developed this site for Sleeping Bear Press following the structure and design of their pre-existing, static site.
-    = link_to 'http://cherrylakepublishing.com', class: 'item transition publisher visible cherrylake' do
-      .caption
-        %h5.extra July 2008
-        .titles
-          %h3.title Cherry Lake Publishing
-          %h4.subtitle Within one month they had a web application to syndicate data throughout the national network of resellers and a virtual storefront to facilitate credit card purchases from customers direct.
-    = link_to 'http://mollyomara.com', class: 'item transition other visible mollyomara' do
-      .caption
-        %h5.extra June 2010
-        .titles
-          %h3.title Molly O'Mara
-          %h4.subtitle Although outside our normal client base, we jumped at the possibility of working with artist Molly O’Mara. Communicating her large-scale art via a website offered a unique challenge.
-    = link_to 'http://childsworld.com', class: 'item transition publisher visible childsworld' do
-      .caption
-        %h5.extra March 2006
-        .titles
-          %h3.title The Child's World
-          %h4.subtitle After years of modifying open-source ecommerce solutions to fit the unique needs of the educational publishing market, The Child’s World approached propulsion to develop TitleLeaf.
-    = link_to 'http://bourgeoisdesign.co', class: 'item transition other visible bourgeois' do
-      .caption
-        %h5.extra October 2012
-        .titles
-          %h3.title Bourgeois Interior Design
-          %h4.subtitle Bourgeois Interior Design approached us based on the work we had done for their partners. The simplicity of folio was an immediate selling point.
-    = link_to '', class: 'item transition other visible dreamslice' do
-      .caption
-        %h5.extra December 2008
-        .titles
-          %h3.title Dreamslice International
-          %h4.subtitle Dreamslice International approached propulsion to develop an online site devoted to shared-ownership real estate. The resulting application displayed properties from multiple MLS feeds as an overlay on Google Maps and matched like-minded buyers.
+%section.white-bg.pad-top-quarter.pad-bottom-quarter
+  .container-fluid
+    .row
+      %section#works-filter-panel.works-filter-panel.white-bg
+        .works-filter-wrap
+          .works-filter.clearfix.font2
+            %li
+              = link_to '#', id: 'all', 'data-filter' => '*', class: 'active' do
+                %span All
+            %li
+              = link_to '#', 'data-filter' => '.publisher' do
+                %span Publishers
+            %li
+              = link_to '#', 'data-filter' => '.other' do
+                %span Other
 
-%section.bg-dark
-  .row
-    .col-md-8.col-md-offset-2.text-center
-      = partial 'partials/contact'
+#works-container.works-container.works-masonry-container.clearfix.white-bg
+
+  .works-item.works-item-one-half.info.publisher
+    = image_tag 'portfolio/jappleseed.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://jappleseedmedia.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold J. Appleseed (September 2015)
+        %p
+          %span.white.font1 J. Appleseed is using TitleLeaf to streamline interaction between sales representatives and their school/library customers.
+
+  .works-item.works-item-one-half.info.publisher
+    = image_tag 'portfolio/bearport.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://bearportpublishing.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold Bearport Publishing (August 2015)
+        %p
+          %span.white.font1 Bearport Publishing wanted to avoid the big upgrade expense associated with CyberWolf's PowerWeb solution. TitleLeaf fit the bill.
+
+  .works-item.works-item-one-half.info.publisher
+    = image_tag 'portfolio/epicpress.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://epicpress.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold EPIC Press (May 2015)
+        %p
+          %span.white.font1 EPIC Press is a sister company to ABDO Publishing. Based on ABDO's positive experience with TitleLeaf, EPIC Press came directly to us for an ecommerce website.
+
+  .works-item.works-item-one-half.info.publisher
+    = image_tag 'portfolio/midamerica.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://midamericabooks.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold MidAmerica Books (October 2014)
+        %p
+          %span.white.font1 MidAmerica Books chose TitleLeaf considering it’s long-standing history and custom features that address their book preview business model.
+
+  .works-item.works-item-one-half.info.other
+    = image_tag 'portfolio/abdopub.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://abdopublishing.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold ABDO Publishing (July 2014)
+        %p
+          %span.white.font1 After testing a WordPress ecommerce solution, Abdo Publishing decided an application built for the unique needs of publishers was more appropriate.
+
+  .works-item.works-item-one-half.info.other
+    = image_tag 'portfolio/sleepingbear.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://sleepingbearpress.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold Sleeping Bear Press (December 2012)
+        %p
+          %span.white.font1 Showcasing the flexibility of titleleaf, we developed this site for Sleeping Bear Press following the structure and design of their pre-existing, static site.
+
+  .works-item.works-item-one-half.info.other
+    = image_tag 'portfolio/mollyomara.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://mollyomara.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold Molly O'Mara (June 2010)
+        %p
+          %span.white.font1 Although outside our normal client base, we jumped at the possibility of working with artist Molly O’Mara. Communicating her large-scale art via a website offered a unique challenge.
+
+  .works-item.works-item-one-half.info.other
+    = image_tag 'portfolio/dreamslice.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://dreamslice.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold Dreamslice Internation (December 2008)
+        %p
+          %span.white.font1 Dreamslice International approached propulsion to develop an online site devoted to shared-ownership real estate. The resulting application displayed properties from multiple MLS feeds as an overlay on Google Maps and matched like-minded buyers.
+
+  .works-item.works-item-one-half.info.publisher
+    = image_tag 'portfolio/childsworld.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://childsworld.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold The Child's World (March 2006)
+        %p
+          %span.white.font1 After years of modifying open-source ecommerce solutions to fit the unique needs of the educational publishing market, The Child’s World approached propulsion to develop TitleLeaf.
+
+  .works-item.works-item-one-half.info.other
+    = image_tag 'portfolio/cherrylake.jpg', class: 'img-responsive', alt: '', title: ''
+    = link_to 'http://cherrylakepublishing.com' do
+      .works-item-inner
+        %h3
+          %span.white.font2bold Cherry Lake Publishing (July 2008)
+        %p
+          %span.white.font1 Within one month they had a web application to syndicate data throughout the national network of resellers and a virtual storefront to facilitate credit card purchases from customers direct.
