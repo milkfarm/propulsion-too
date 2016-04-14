@@ -16,10 +16,17 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
-$dark-gray: #333;
+$red: #ff8020;
+$green: #a0bf00;
+$blue: #00c0bf;
+$color: $blue;
+$link: $red;
+$hover: darken($link, 10%);
+$dark-gray: #292829;
 $medium-gray: #999;
-$light-gray: #ddd;
+$light-gray: #eee;
+$white: #fff;
+$black: #141413;
 
 // Font Colors
 $base-font-color: $dark-gray;
