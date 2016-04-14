@@ -12,7 +12,7 @@ title: contact
           Have an idea you want realized? Looking to improve the way you do business on the web?
           %span.highlight= link_to 'Email us.', '#contact'
 
-%section.common-content.white-bg.pad-top-half.pad-bottom
+%section.common-content.white-bg.pad-top-half.pad-bottom-half
   .container
     .row
       .map
@@ -20,8 +20,11 @@ title: contact
 
     #contact.row
       .col-md-4.no-pad.text-left
-        = image_tag 'lake-tahoe.png', style: 'height:150px;float:left;'
-      .col-md-8
+        = image_tag 'lake-tahoe.png', class: 'img-responsive', style: 'max-height:200px; margin-bottom:15px;'
+        %ul
+          %li.font2ultralight Lake Tahoe, California
+          %li.font2ultralight= data.config.company_email
+      .col-md-8.pad-top-half
         = form_tag 'https://formkeep.com/f/40f8d2f44e9c', id: 'contact_form' do
           %input{ type: 'hidden', name: 'utf8', value: '✓' }
           %input{ type: 'hidden', name: 'subject', value: 'Contact Form' }
