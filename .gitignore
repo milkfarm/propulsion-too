@@ -6,3 +6,4 @@
 .ruby-gemset
 .ruby-version
 /data/config.yml
+/data/deploy.yml

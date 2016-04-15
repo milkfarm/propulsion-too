@@ -20,20 +20,20 @@ configure :build do
   activate :relative_assets
 end
 
-case ENV['TARGET'].to_s.downcase
-when 'production'
-  activate :deploy do |deploy|
-    deploy.build_before = true
-    deploy.deploy_method = :rsync
-    deploy.user = data.config.deploy_user
-    deploy.host = data.config.deploy_host
-    deploy.path = data.config.deploy_path
-    deploy.clean = true
-    deploy.port = data.config.deploy_port
-  end
-else
-  activate :deploy do |deploy|
-    deploy.build_before = true
-    deploy.deploy_method = :git
-  end
+# Load deploy settings
+config_file_name = 'data/deploy.yml'
+config_file_path = File.join(::Middleman::Application.root, config_file_name)
+unless File.exists?(config_file_path)
+  raise "Deployment file not found '#{config_file_name}'"
+end
+io = File.open(config_file_path, 'r')
+yml = YAML.load(io)
+env = ENV['TARGET'].present? ? ENV['TARGET'].to_s.downcase : 'staging'
+unless yml.keys.include?(env)
+  raise "Deployment environment not defined '#{env}'"
+end
+settings = yml[env].symbolize_keys
+
+activate :deploy do |deploy|
+  settings.each { |k,v| deploy.send("#{k}=", v) }
 end

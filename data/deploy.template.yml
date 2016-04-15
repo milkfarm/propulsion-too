@@ -1,0 +1,14 @@
+---
+defaults: &defaults
+  build_before:
+  deploy_method:
+  clean:
+  user:
+  host:
+  path:
+  port:
+  flags:
+staging:
+  <<: *defaults
+production:
+  <<: *defaults
