@@ -20,20 +20,25 @@ title: contact
 
     #contact.row
       .col-md-4.no-pad.text-left
-        = image_tag 'lake-tahoe.png', class: 'img-responsive', style: 'max-height:200px; margin-bottom:15px;'
-        %ul
-          %li.font2ultralight Lake Tahoe, California
-          %li.font2ultralight= data.config.company_email
-      .col-md-8.pad-top-half
+        = image_tag 'lake-tahoe.png', class: 'img-responsive', style: 'width:100%; margin-bottom:15px;'
+        %ul{ style: 'line-height:2em;' }
+          %li.font2ultralight
+            = image_tag 'icons/office.svg', style: 'width:14px; padding-right:3px; padding-bottom:3px;'
+            Lake Tahoe, California
+          %li.font2ultralight
+            = image_tag 'icons/email.svg', style: 'width:14px; padding-right:3px; padding-bottom:3px;'
+            = data.config.company_email
+      .col-md-8.pad-top-half.pad-left-half
+        %h2{ style: 'margin-bottom:1em;' } Please complete the form
         = form_tag 'https://formkeep.com/f/40f8d2f44e9c', id: 'contact_form' do
           %input{ type: 'hidden', name: 'utf8', value: '✓' }
           %input{ type: 'hidden', name: 'subject', value: 'Contact Form' }
-          .row
+          .row{ style: 'margin-left:0;' }
             %p.msg{ style: 'display:none;' } Please complete the form accordingly.
-          .row
+          .row{ style: 'margin-left:0;' }
             %input.form-control#name{ name: 'name', placeholder: 'Name', type: 'text' }
             %input.form-control#email{ name: 'email', placeholder: 'E-mail', type: 'text' }
             %input.form-control#phone{ name: 'phone', placeholder: 'Phone', type: 'text' }
             %textarea.form-control#message{ name: 'message', placeholder: 'Message', type: 'text' }
-          .row
+          .row{ style: 'margin-left:0;' }
             %button.btn.btn-nord.btn-nord-dark#send{ type: 'submit' } Send
