@@ -672,7 +672,7 @@ section.mastwrap {
         }
         .works-item-inner{
             text-align: left;
-            padding: 10px;
+            padding: 0;
             height: 100%;
             width: 85%;
         }
@@ -684,13 +684,13 @@ section.mastwrap {
             text-transform: uppercase;
             letter-spacing: 4px;
         }
-        .works-item-inner h3 > span:after{
-          content: ' ';
-          width: 30px;
-          height: 30px;
-          display: block;
-          margin-top: 5px;
-        }
+        /*.works-item-inner h3 > span:after{*/
+          /*content: ' ';*/
+          /*width: 30px;*/
+          /*height: 30px;*/
+          /*display: block;*/
+          /*margin-top: 5px;*/
+        /*}*/
         .works-item-inner p{
           margin-top: 15px;
         }
@@ -1372,7 +1372,7 @@ nav.mastnav { border-color:$white }
 .project-page .tp-bullets.simplebullets.round .bullet.selected { background-color:$black!important }
 .featured-title-caption span.dark:after, .featured-title-caption span.dark:before, .featured-work-caption span.dark:after, .featured-work-caption span.dark:before { background-color:$dark-gray }
 .featured-title-caption span.white:after, .featured-title-caption span.white:before, .featured-work-caption span.white:after, .featured-work-caption span.white:before { background-color:$white }
-.works-item-inner h3>span:after { background-color:$color }
+/*.works-item-inner h3>span:after { background-color:$color }*/
 .common-content h4.dark { background-color:$dark-gray; color:$white }
 .common-content h4.white { background-color:$white; color:$dark-gray }
 .common-content h4.silver { background-color:$light-gray; color:$dark-gray }
