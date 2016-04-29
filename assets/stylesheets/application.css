@@ -10319,7 +10319,7 @@ section.mastwrap {
 
 .works-item-inner {
   text-align: left;
-  padding: 10px;
+  padding: 0;
   height: 100%;
   width: 85%; }
 
@@ -10331,13 +10331,13 @@ section.mastwrap {
   text-transform: uppercase;
   letter-spacing: 4px; }
 
-.works-item-inner h3 > span:after {
-  content: ' ';
-  width: 30px;
-  height: 30px;
-  display: block;
-  margin-top: 5px; }
-
+/*.works-item-inner h3 > span:after{*/
+/*content: ' ';*/
+/*width: 30px;*/
+/*height: 30px;*/
+/*display: block;*/
+/*margin-top: 5px;*/
+/*}*/
 .works-item-inner p {
   margin-top: 15px; }
 
@@ -10833,7 +10833,7 @@ fieldset h1 {
 (Please read PDF guide to manage colors via LESS with just a single line of code editing)*/
 /*–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .font1 {
-  font-family: "Open Sans", sans-serif; }
+  font-family: montserratlight, sans-serif; }
 
 .font2 {
   font-family: montserrat, sans-serif; }
@@ -10863,7 +10863,7 @@ fieldset h1 {
   font-family: "Droid Serif", serif; }
 
 body, p {
-  font-family: "Open Sans", sans-serif; }
+  font-family: montserratlight, sans-serif; }
 
 .featured-title-caption {
   font-family: montserratultra_light, sans-serif; }
@@ -10994,9 +10994,7 @@ nav.mastnav {
 .featured-title-caption span.white:after, .featured-title-caption span.white:before, .featured-work-caption span.white:after, .featured-work-caption span.white:before {
   background-color: #fff; }
 
-.works-item-inner h3 > span:after {
-  background-color: #00c0bf; }
-
+/*.works-item-inner h3>span:after { background-color:$color }*/
 .common-content h4.dark {
   background-color: #292829;
   color: #fff; }
@@ -11076,10 +11074,10 @@ there
     line-height: 21px;
     letter-spacing: 2px; }
 
-  .works-item-inner h3 > span::after {
-    width: 30px;
-    height: 30px; }
-
+  /*.works-item-inner h3 > span::after{*/
+  /*width: 30px;*/
+  /*height: 30px;*/
+  /*}*/
   .works-masonry-container .works-item-one-fourth,
   .works-masonry-container .works-item-one-third {
     margin: 0 !important;
